@@ -1,0 +1,36 @@
+\documentclass[journal,twocolumn]{IEEEtran}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\title{Assignment 8}
+\author{NIMMALA AVINASH(CS21BTECH11039)}
+\begin{document}
+
+\maketitle
+
+{\LARGE \textbf{Question:\\}}
+
+\begin{large}
+
+The time to failure of a bulb is a random variable x with density $ ce^{-cx}U(x)$. We test 80 bulbs 
+and find that 200 hours later, 62 of them are still good. Find the ML estimate of c. \\
+
+\end{large}
+{\LARGE \textbf{Solution:\\}}
+\begin{large}
+The probability\\
+$$ p=1-F_{X}(200)=e^{-200c} $$\\
+of the event {X > 200} is a monotone decreasing function of c. To find the ML estimate $\hat{c}$ of c it suffices to find
+the ML estimate $ \hat{p} $ of p.\\
+\begin{align}
+\hat{p}&= \frac{62}{80} = 0.775 \\
+p&=e^{-200c}\\
+ln(p)&=-200c\\
+\implies c&=-\frac{1}{200}ln(\hat{p}) \\
+c&=0.0013
+\end{align}
+\end{large}
+\end{document}
